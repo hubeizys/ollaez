@@ -1,3 +1,4 @@
+
 package discover
 
 import (
@@ -18,12 +19,14 @@ const (
 
 	// TODO  We're lookinng for this exact name to detect iGPUs since hipGetDeviceProperties never reports integrated==true
 	iGPUName = "AMD Radeon(TM) Graphics"
+
 )
 
 var (
 	// Used to validate if the given ROCm lib is usable
 	ROCmLibGlobs          = []string{"hipblas.dll", "rocblas"}                 // This is not sufficient to discern v5 vs v6
 	RocmStandardLocations = []string{"C:\\Program Files\\AMD\\ROCm\\6.1\\bin"} // TODO glob?
+
 )
 
 // Only called once during bootstrap
